@@ -1,29 +1,45 @@
+import { useEffect, useState } from 'react';
 import './App.css';
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Bio from './components/Bio';
-import Menu from './components/Menu';
-import FamousPicture from './components/FamousPicture';
-import PictureCollection from './components/PictureCollection';
-import Home from './components/Home';
+import Random from './components/Random';
+import TrafficLight from './components/TrafficLight';
 
 function App() {
+  const [TLState, setTLState] = useState("go");
+
+  function wait(seconds)
+  {
+    return new Promise(resolve => setTimeout(resolve, (seconds * 1000)));
+  }
+
+  useEffect(() => {
+    async function TLWork() {
+    await wait(30);
+    
+    setTLState("stop");
+
+    await wait(60);
+    
+    setTLState("getReady");
+
+    await wait(4);
+
+    setTLState("go");
+    }
+
+    TLWork();
+  }, [])
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <header>
-          <Menu/>
-        </header>
+      <div>
+        <Random start="1" end="10"/>
+      </div>
 
-        <h1>Pablo Picasso website</h1>
-      
-        <Routes>
-          <Route index element={<Home/>}/>
-          <Route path='bio' element={<Bio/>}/>
-          <Route path='famous-picture' element={<FamousPicture/>}/>
-          <Route path='picture-collection' element={<PictureCollection/>}/>
-        </Routes>
-      </BrowserRouter>
+      <br/>
+
+      <div>
+        <TrafficLight state={TLState}/>
+      </div>     
     </div>
   );
 }

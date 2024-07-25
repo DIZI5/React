@@ -37,60 +37,18 @@
   }
 }
 
-div.bio-container {
-  display: flex;
-  margin: auto;
-  width: 70%;
+.go {
+  background-color: limegreen;
 }
 
-div.short-info {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid lightgrey;
+.getReady {
+  background-color: goldenrod;
 }
 
-div.long-info {
-  margin: 10px;
-  padding: 10px;
+.stop {
+  background-color: darkred;
 }
 
-h1.bio-title {
-  text-align: left;
-}
-
-p.bio-desc {
-  text-align: left;
-}
-
-nav {
-  height: 40px;
-  background-color: rgb(78, 235, 78);
-}
-
-a {
-  display: inline-block;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  background-color: lightgreen;
-}
-
-img.famous-pic {
-  width: 99%;
-  height: auto;
-  border: 10px solid goldenrod;
-}
-
-div.pic-col {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-img.pic {
-  width: 500px;
+br {
+  margin: 25px;
 }
