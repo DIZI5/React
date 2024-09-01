@@ -1,0 +1,278 @@
+* {
+  color: #f1eeee;
+}
+
+html {
+  background-color: #0a0908;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #5f5a4b;
+  background-color: #1b1a16;
+}
+
+.App {
+  text-align: center;
+}
+
+div.products-container {
+  display: grid;
+  width: 60%;
+  max-width: 1200px;
+  margin: 20px auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+div.product-container {
+  display: grid;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+
+div.product-block {
+  display: flex;
+  min-height: 300px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #161514;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+div.img-container {
+  position: relative;
+  display: block;
+  width: 600px;
+  margin: 10px;
+  padding: 30px;
+  grid-row: span 2;
+  border-radius: 10px;
+  background-color: #161514;
+}
+
+div.selected-img-container {
+  position: relative;
+}
+
+div.img-gallery {
+  display: flex;
+  min-width: 600px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+div.details-container {
+  display: flex;
+  margin: 10px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #161514;
+}
+
+div.product-details-container {
+  margin: 20px;
+  text-align: start;
+}
+
+div.description-container {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #161514;
+}
+
+div.button-container {
+  display: flex;
+}
+
+div.button-container > button.add-to-cart {
+  margin-right: 10px;
+}
+
+div.button-container > button.buy-on-credit {
+  margin-left: 10px;
+}
+
+div.categories {
+  display: flex;
+}
+
+div.category {
+  padding: 10px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+div.category.active {
+  border-bottom: 3px solid #5f8ae9;
+}
+
+div.cat-visible {
+  opacity: 1;
+  max-height: 100px;
+  transition: all 0.3s ease-in;
+}
+
+div.cat-hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+div.news-slider {
+  display: flex;
+  width: 60%;
+  margin: auto;
+}
+
+div.news-block {
+  min-width: 100%;
+  cursor: pointer;
+}
+
+div.news-hidden {
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-out;
+}
+
+div.news-visible {
+  max-width: 100%;
+  transition: all 1s ease-in;
+}
+
+div.news-container {
+  width: 50%;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+img.showed-img {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+img.selected-img, img.img {
+  width: 150px;
+  border-radius: 0px;
+}
+
+img.selected-img {
+  box-sizing: border-box;
+  border: 5px solid #5f8ae9;
+}
+
+img.news-img {
+  width: 100%;
+  border-radius: 0px;
+}
+
+h3.title {
+  display: inline-block;
+  width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h4.price, h2.price {
+  text-align: end;
+}
+
+p.news-content {
+  text-align: start;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  color: #0a0908;
+  font-weight: bold;
+  background-color: #8b9cc3;
+  border: 2px solid #93abe2;
+  border-radius: 7px;
+}
+
+button:hover {
+  background-color: #6e88c5;
+  border: 2px solid #93abe2;
+}
+
+button:active {
+  background-color: #537bd9;
+  border: 2px solid #6e88c5;
+}
+
+button.add-to-cart, button.buy-on-credit {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+button.buy-on-credit {
+  color: #f1eeee;
+  background-color: #5f5a4b;
+  border: 2px solid #696454;
+}
+
+button.buy-on-credit:hover {
+  background-color: #696454;
+  border: 2px solid #726d5b;
+}
+
+button.buy-on-credit:active {
+  background-color: #575244;
+  border: 2px solid #5f5a4b;
+}
+
+button.img-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  margin-top: 30px;
+  padding: 20px;
+  height: 600px;
+  background-color: #131210;
+  color: #f1eeee;
+  border: none;
+  border-radius: 0;
+  opacity: 0.5;
+}
+
+button.img-slider:hover {
+  background-color: #161514;
+}
+
+button.img-slider:active {
+  background-color: #11100e;
+}
+
+button.prev {
+  left: 30px;
+}
+
+button.next {
+  right: 30px;
+}

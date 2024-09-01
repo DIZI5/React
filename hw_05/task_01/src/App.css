@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+div.bio-container {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+div.short-info {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+
+div.long-info {
+  margin: 10px;
+  padding: 10px;
+}
+
+h1.bio-title {
+  text-align: left;
+}
+
+p.bio-desc {
+  text-align: left;
+}
+
+nav {
+  height: 40px;
+  background-color: rgb(78, 235, 78);
+}
+
+a {
+  display: inline-block;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+ol {
+  text-align: left;
+}
+
+a.pics-a {
+  color: black;
+  font-weight: bold;
+}
+
+a.pics-a:hover {
+  color: #61dafb;
+  background-color: transparent;
+}
+
+img.famous-pic {
+  width: 99%;
+  height: auto;
+  border: 10px solid goldenrod;
+}
+
+div.pic-container {
+  width: 50%;
+  margin: auto;
+}
+
+div.pic-container > p {
+  text-align: left;
+}
+
+img.pic {
+  width: 500px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+form {
+  width: 15%;
+  margin: auto;
+}
+
+div.input-container, div.submit-container {
+  margin: 10px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
